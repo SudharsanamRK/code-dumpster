@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Survey Builder</h2>
+    <div class="input-group">
+      <input type="text" id="question" placeholder="Enter your question...">
+      <select id="input-type">
+        <option value="text">Text</option>
+        <option value="radio">Multiple Choice</option>
+        <option value="checkbox">Checkboxes</option>
+      </select>
+      <button onclick="addQuestion()">Add</button>
+    </div>
+    <ul id="survey-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
