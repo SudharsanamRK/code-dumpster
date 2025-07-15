@@ -23,3 +23,11 @@ python app.py
 ```
 
 > Visit http://127.0.0.1:5000 to use..
+
+## Hosted Demo
+
+**Live Web App**:  
+[https://code-dumpster.onrender.com](https://code-dumpster.onrender.com)
+
+> Upload your resume PDF and compare it against any job description.  
+> Shows top matched keywords, missing skills, and a final match verdict!
