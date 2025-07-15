@@ -1,0 +1,83 @@
+body {
+  background-color: #f4fff6;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.todo-container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border: 2px solid #1b1b1b;
+  box-shadow: 8px 8px 0 #1b1b1b;
+  text-align: left;
+  width: 350px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  font-family: inherit;
+  padding: 4px;
+  margin-right: 5px;
+  font-size: 14px;
+  width: 60%;
+  border: 1px solid #ccc;
+}
+
+button {
+  font-family: inherit;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #000;
+  background: #f8f8f8;
+}
+
+ul {
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.task-text {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.tick {
+  cursor: pointer;
+  color: green;
+  font-weight: bold;
+}
+
+.delete {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+}
