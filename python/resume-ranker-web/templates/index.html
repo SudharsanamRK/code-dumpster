@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Ranker</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>📄 Resume Ranker</h2>
+    <form method="POST" enctype="multipart/form-data">
+      <label>Upload Resume (.pdf):</label><br>
+      <input type="file" name="resume" required><br><br>
+
+      <label>Paste Job Description:</label><br>
+      <textarea name="jobdesc" rows="6" required></textarea><br><br>
+
+      <button type="submit">Analyze</button>
+    </form>
+
+    {% if score is not none %}
+    <div class="result">
+      <h3>Match Score: {{ score }}%</h3>
+      <p>{{ verdict }}</p>
+
+      <h4>✅ Top Matched Keywords</h4>
+      <p>{{ matched | join(', ') }}</p>
+
+      <h4>❌ Missing Keywords</h4>
+      <p>{{ missing | join(', ') }}</p>
+
+      {% if export_ready %}
+      <a href="/download" class="download-btn">📥 Download Result (.txt)</a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
